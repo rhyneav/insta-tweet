@@ -1,16 +1,18 @@
 // Initialize a blank tweet
-var tweet = ""
+var tweet = "";
 
 // String -> String
 // Consume a string and tweet that string if it's below 140 characters. Otherwise, open a dialogue to shorten it.
 function StringSizer() {
     if (tweet.length > 140) {
         // Open dialogue to edit the tweet
-        console.log("edit tweet: " + tweet)
+        console.log("edit tweet: " + tweet);
+        document.getElementById("TweetEdit").value = tweet;
+        SetCharacterLength();
     } 
     else {
         // String is good, prepare to tweet
-        console.log("send tweet: " + tweet)
+        console.log("send tweet: " + tweet);
     }
 }
 
@@ -20,16 +22,34 @@ function GetSelectedText() {
     if (window.getSelection) {  // all browsers, except IE before version 9
         var range = window.getSelection();
         tweet = range.toString();
-        StringSizer()
+        StringSizer();
     } 
     else {
         if (document.selection.createRange) { // Internet Explorer
             var range = document.selection.createRange();
             tweet = range.text;
-            StringSizer()
+            StringSizer();
         }
     }
 }
+
+
+// See how long the tweet being edited is
+function SetCharacterLength(){
+    var TweetEdit = document.getElementById("TweetEdit");
+    var TweetCharacter = document.getElementById("TweetLength");
+    
+    function Update(){
+        var CharactersLeft = 140 - TweetEdit.value.length;
+        TweetCharacter.innerHTML = CharactersLeft;
+    }
+    
+    Update();
+    
+    TweetEdit.onkeyup = function() {
+        Update();
+    };
+};
 
 // TODO Add Twitter API
 
