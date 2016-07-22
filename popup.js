@@ -13,6 +13,7 @@ function StringSizer() {
     else {
         // String is good, prepare to tweet
         console.log("send tweet: " + tweet);
+        SendTweet();
     }
 }
 
@@ -35,7 +36,7 @@ function GetSelectedText() {
 
 
 // See how long the tweet being edited is
-function SetCharacterLength(){
+function SetCharacterLength() {
     var TweetEdit = document.getElementById("TweetEdit");
     var TweetCharacter = document.getElementById("TweetLength");
     
@@ -49,7 +50,21 @@ function SetCharacterLength(){
     TweetEdit.onkeyup = function() {
         Update();
     };
-};
+}
+
+function SendTweet() {
+    var first = "https://twitter.com/intent/tweet?text=";
+    var formattedTweet = encodeURIComponent(tweet);
+    var win = window.open(first + formattedTweet, "_blank");
+    
+    if (win) {
+        //Browser has allowed it to be opened
+        win.focus();
+    } else {
+        //Browser has blocked it
+        alert('Please allow popups for this chrome extension');
+}
+}
 
 // TODO Add Twitter API
 
