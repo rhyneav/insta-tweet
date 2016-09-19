@@ -1,10 +1,10 @@
 # Insta-Tweet
 
 ### What
-- Insta-Tweet is a simple chrome extension made to make Tweeting content from websites easier. It was originally developed by Rhyne to learn the basics of making Chrome extensions. 
+- Insta-Tweet is a simple chrome extension made to make Tweeting content from websites easier. It was originally developed by Rhyne to learn the basics of making Chrome extensions.
 
 ### Using
-- Install Insta-Tweet from the Chrome store here: 
+- Install Insta-Tweet from the Chrome store here: https://chrome.google.com/webstore/detail/insta-tweet/hihhgpdjpfhbkkggfedjpaceijkhdkld
 - Simply just highlight the text you want to Tweet out, right click, and select 'Tweet: textyouhavehighlighted...'.
 
 ### Todo
