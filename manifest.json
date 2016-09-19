@@ -1,18 +1,20 @@
 {
     "manifest_version": 2,
-    
+
     "name": "Insta-Tweet",
     "description": "This extension will allow you to Tweet selected text in one click.",
     "version": "1.0",
-    
+
     "permissions": [
       "contextMenus"
      ],
-    "background": { 
+    "background": {
       "scripts": ["script.js"]
     },
-    
-    "icons": { 
-        "16": "icon16.png"
+
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
     }
 }
