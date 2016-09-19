@@ -2,7 +2,8 @@
     "manifest_version": 2,
 
     "name": "Insta-Tweet",
-    "description": "This extension will allow you to Tweet selected text in one click.",
+    "short_name": "Tweet stuff in like three clicks",
+    "description": "This extension will allow you to Tweet selected text by opening Twitter's New Tweet URL in another tab.",
     "version": "1.0",
 
     "permissions": [
